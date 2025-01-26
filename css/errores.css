@@ -1,0 +1,10 @@
+.error-list {
+    color: red;
+    font-size: 14px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.error-list li {
+    margin-bottom: 5px;
+}
