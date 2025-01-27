@@ -15,7 +15,7 @@ include 'logica_productos.php';
 <body>
 
     <!-- Formulario de búsqueda -->
-    <form action="listar_productos.php" method="get"> <!-- Asegúrate de que apunta a listar_productos.php -->
+    <form action="listar_productos.php" method="get"> 
         <input type="text" id="buscar" name="buscar" placeholder="Buscar productos...">
         <button type="submit">Buscar</button>
     </form>
