@@ -22,7 +22,7 @@ $parámetros = [];
 
 if (!empty($busqueda)) {
     // Si hay búsqueda, añadimos las condiciones
-    $condiciones .= " AND (nombre LIKE :busqueda OR descripcion LIKE :busqueda)"; // Cambiado de $condiciones = a $condiciones .=
+    $condiciones .= " AND (nombre LIKE :busqueda OR descripcion LIKE :busqueda)"; 
     $parámetros[':busqueda'] = '%' . $busqueda . '%';
 }
 
