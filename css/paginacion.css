@@ -1,0 +1,70 @@
+/* 📌 Paginación */
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+    padding: 20px 0;
+    min-height: 60px; 
+}
+
+.paginacion a,
+.paginacion span {
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid var(--color-primario);
+    background: var(--color-secundario);
+    color: var(--color-texto);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.paginacion a:hover {
+    background: var(--color-primario);
+    color: white;
+}
+
+.paginacion .activo {
+    background: var(--color-primario);
+    color: white;
+}
+
+.paginacion span {
+    opacity: 0.5; /* Hace que "Anterior" y "Siguiente" deshabilitados se vean menos */
+    cursor: default;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .paginacion {
+        gap: 5px; /* Reduce la separación entre los elementos */
+        margin-top: 20px;
+        padding: 15px 0;
+    }
+
+    .paginacion a,
+    .paginacion span {
+        padding: 8px 12px; /* Reduce el tamaño de los botones */
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .paginacion {
+        flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
+        gap: 3px;
+    }
+
+    .paginacion a,
+    .paginacion span {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+}
+

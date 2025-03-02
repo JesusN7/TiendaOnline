@@ -1,0 +1,196 @@
+/* VARIABLES GLOBALES */
+:root {
+    --color-primario: #ff5733;
+    --color-secundario: #f8f9fa;
+    --color-texto: #333;
+    --color-fondo: #ffffff;
+    --color-borde: #ddd;
+}
+
+/* RESETEO GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ESTILO GENERAL DEL LAYOUT */
+.container-fluid {
+    width: 100%;
+    padding: 0 15px;
+}
+
+/* TÍTULO DEL PERFIL */
+.card-header {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* TARJETA DE PERFIL */
+.card {
+    margin-top: 20px;
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-secundario);
+}
+
+.card-body {
+    padding: 2rem;
+    background-color: var(--color-fondo);
+}
+
+.card-body .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-body .col-12 {
+    flex: 1;
+}
+
+.card-body .d-flex {
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-body .d-flex i {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: var(--color-primario);
+}
+
+.card-body .d-flex div {
+    font-size: 1.1rem;
+}
+
+.card-body .d-flex div h5 {
+    font-weight: bold;
+    color: var(--color-texto);
+}
+
+.card-body .d-flex div p {
+    margin-top: 5px;
+    color: var(--color-texto);
+}
+
+/* BOTONES Y ACCIONES */
+.card-footer {
+    padding: 1rem;
+    background-color: var(--color-primario);
+    color: white;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-footer .btn {
+    color: white;
+    background-color: var(--color-primario);
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.card-footer .btn:hover {
+    background-color: #cc4628;
+}
+
+.card-footer .btn-secondary {
+    background-color: #6c757d;
+}
+
+.card-footer .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.card-footer .btn-danger {
+    background-color: #dc3545;
+}
+
+.card-footer .btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* EFECTOS HOVER */
+.hover-transform {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-transform:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ESTILOS PARA FORMULARIOS */
+.form-control {
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid var(--color-borde);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 5px rgba(255, 87, 51, 0.5);
+}
+
+/* Separación entre los botones */
+.card-footer .d-flex .btn {
+    margin-right: 10px;
+}
+
+.card-footer .d-flex .btn:last-child {
+    margin-right: 0;
+}
+
+.card-footer .d-flex {
+    gap: 20px;
+    /* Aumenta la distancia entre los botones */
+}
+
+
+/* AJUSTES PARA EL PERFIL EN MOVIL */
+@media (max-width: 768px) {
+    .card-body .d-flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card-body .d-flex div {
+        margin-bottom: 10px;
+    }
+
+    .card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card-footer .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .card-footer .btn:last-child {
+        margin-bottom: 0;
+    }
+}

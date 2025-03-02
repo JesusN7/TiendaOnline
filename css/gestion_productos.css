@@ -1,0 +1,164 @@
+/* VARIABLES GLOBALES */
+:root {
+    --color-primario: #ff5733;
+    --color-secundario: #ffffff;
+    --color-texto: #333;
+    --color-fondo: #f8f9fa;
+    --color-borde: #ddd;
+    --transition-base: 0.3s ease;
+}
+
+/* ESTILOS BASE */
+body {
+    background-color: var(--color-fondo);
+    font-family: 'Arial', sans-serif;
+    color: var(--color-texto);
+}
+
+h2 {
+    color: var(--color-primario);
+    margin-bottom: 1.5rem;
+}
+
+/* COMPONENTES */
+/* ----- Tablas ----- */
+.table {
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 12px;
+}
+
+.table thead {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.table-striped tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* ----- Botones ----- */
+.btn {
+    transition: all var(--transition-base);
+    border-radius: 0.3rem;
+    padding: 8px 15px;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-custom {
+    background-color: var(--color-primario);
+    color: #fff;
+}
+
+.btn-custom:hover {
+    background-color: #e14a2b;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* ----- Paginación ----- */
+.pagination {
+    display: flex;
+    gap: 10px;
+    margin: 40px 0;
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+}
+
+.page-link {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid var(--color-primario);
+    background: var(--color-secundario);
+    color: var(--color-texto);
+    font-weight: bold;
+    text-decoration: none;
+    transition: all var(--transition-base);
+}
+
+.page-link:hover {
+    background: var(--color-primario);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.page-item.active .page-link {
+    background: var(--color-primario);
+    color: white;
+    border-color: var(--color-primario);
+}
+
+.page-item.disabled .page-link {
+    opacity: 0.5;
+    border-color: var(--color-borde);
+}
+
+/* ----- Formularios ----- */
+.form-control,
+.form-select {
+    border-radius: 0.3rem;
+    border: 1px solid var(--color-borde);
+}
+
+/* ============== UTILITIES ============== */
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* ============== RESPONSIVE ============== */
+@media (max-width: 768px) {
+    .pagination {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .page-link {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

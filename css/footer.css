@@ -1,0 +1,56 @@
+/* FOOTER GENERAL */
+.footer {
+    background: var(--color-secundario);
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+/* TEXTO DEL FOOTER */
+.footer p {
+    font-size: 1rem;
+    color: var(--color-texto);
+    margin: 0;
+}
+
+/* ENLACES */
+.footer a {
+    font-size: 1rem;
+    color: var(--color-texto);
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover {
+    color: var(--color-primario);
+}
+
+/* REDES SOCIALES */
+.redes-sociales a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.redes-sociales a img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/* Efecto hover: aumento de tamaño y brillo */
+.redes-sociales a:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .footer .row {
+        text-align: center;
+    }
+
+    .redes-sociales a {
+        margin: 5px;
+    }
+}

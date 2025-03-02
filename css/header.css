@@ -1,0 +1,35 @@
+/* HEADER GENERAL */
+header {
+    background: var(--color-secundario)!important;
+}
+
+/* LOGO */
+.navbar-brand img {
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1);
+}
+
+/* MENÚ DE NAVEGACIÓN */
+.nav-link {
+    font-size: 1rem;
+    font-weight: bold !important;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: var(--color-primario) !important; 
+}
+
+/* BOTÓN MENÚ MÓVIL */
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
