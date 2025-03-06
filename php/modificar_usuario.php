@@ -31,7 +31,7 @@ if ($usuarioSesion['rol'] === 'cliente' && $usuarioSesion['id'] !== $idUsuario) 
     die("Un cliente solo puede modificar su propio perfil.");
 }
 
-// Validación corregida para empleados
+// Validación para empleados
 if ($usuarioSesion['rol'] === 'empleado') {
     // Permitir modificar su propio perfil
     if ($usuarioSesion['id'] === $idUsuario) {
